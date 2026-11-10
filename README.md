@@ -1,15 +1,36 @@
 # LeetCode Solutions in Java
 
-A collection of my **LeetCode problem solutions implemented in Java**. This repository documents my problem-solving practice, with solutions organized by LeetCode problem number and title.
+A growing collection of my **LeetCode solutions written in Java**. Each problem is stored in its own directory with the solution and a problem-specific README.
 
-The goal is to strengthen my understanding of data structures, algorithms, problem-solving patterns, and writing efficient Java code.
+This repository tracks my progress in data structures, algorithms, and writing efficient, readable Java code.
+
+## Repository Overview
+
+- **Language:** Java
+- **Platform:** [LeetCode](https://leetcode.com/)
+- **Solutions:** 9
+- **Difficulty breakdown:** 4 Easy · 4 Medium · 1 Hard
+
+## Problems Solved
+
+| # | Problem | Difficulty | Main Topics | Time Complexity | Space Complexity |
+|---:|---|---|---|---:|---:|
+| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy | Array, HashMap | O(n) average | O(n) |
+| 53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Medium | Array, Kadane's Algorithm, Dynamic Programming | O(n) | O(1) |
+| 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy | Array, Boyer–Moore Voting | O(n) | O(1) |
+| 283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Easy | Array, Two Pointers, In-place Updates | O(n) | O(1) |
+| 453 | [Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/) | Medium | Array, Math | O(n) | O(1) |
+| 462 | [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/) | Medium | Array, Sorting, Median | O(n log n) | O(log n)* |
+| 3505 | [Minimum Operations to Make Elements Within K Subarrays Equal](https://leetcode.com/problems/minimum-operations-to-make-elements-within-k-subarrays-equal/) | Hard | Sliding Window, Median, TreeMap, Dynamic Programming | O(n log x + nk) | O(nk + n + x) |
+| 3693 | [Climbing Stairs II](https://leetcode.com/problems/climbing-stairs-ii/) | Medium | Dynamic Programming | O(n) | O(n) |
+| 3736 | [Minimum Moves to Equal Array Elements III](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-iii/) | Easy | Array, Greedy, Math | O(n) | O(1) |
+
+*Space complexity for problem 462 accounts for the sorting implementation's auxiliary stack space; exact implementation details can vary by Java runtime.
 
 ## Repository Structure
 
-Each problem has its own directory containing the Java solution and the problem-specific README.
-
 ```text
-Leetcode/
+Leetcode-main/
 ├── 0001-two-sum/
 │   ├── 0001-two-sum.java
 │   └── README.md
@@ -19,49 +40,49 @@ Leetcode/
 ├── 0169-majority-element/
 │   ├── 0169-majority-element.java
 │   └── README.md
-└── ...
+├── 0283-move-zeroes/
+│   ├── 0283-move-zeroes.java
+│   └── README.md
+├── 0453-minimum-moves-to-equal-array-elements/
+│   ├── 0453-minimum-moves-to-equal-array-elements.java
+│   └── README.md
+├── 0462-minimum-moves-to-equal-array-elements-ii/
+│   ├── 0462-minimum-moves-to-equal-array-elements-ii.java
+│   └── README.md
+├── 3505-minimum-operations-to-make-elements-within-k-subarrays-equal/
+│   ├── 3505-minimum-operations-to-make-elements-within-k-subarrays-equal.java
+│   └── README.md
+├── 3693-climbing-stairs-ii/
+│   ├── 3693-climbing-stairs-ii.java
+│   └── README.md
+├── 3736-minimum-moves-to-equal-array-elements-iii/
+│   ├── 3736-minimum-moves-to-equal-array-elements-iii.java
+│   └── README.md
+└── README.md
 ```
 
-## Problems Solved
+## Concepts and Patterns Practiced
 
-| # | Problem | Main Concept / Technique | Time Complexity | Space Complexity |
-|---:|---|---|---:|---:|
-| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | HashMap | O(n) average | O(n) |
-| 53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Kadane's Algorithm, Dynamic Programming | O(n) | O(1) |
-| 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | Boyer–Moore Voting Algorithm | O(n) | O(1) |
-| 283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Two Pointers, In-place Array Manipulation | O(n) | O(1) |
-| 453 | [Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/) | Math, Array Traversal | O(n) | O(1) |
-| 462 | [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/) | Sorting, Median | O(n log n) | O(1) auxiliary* |
-| 3693 | [Climbing Stairs II](https://leetcode.com/problems/climbing-stairs-ii/) | Dynamic Programming | O(n) | O(n) |
-| 3736 | [Minimum Moves to Equal Array Elements III](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-iii/) | Math, Array Traversal | O(n) | O(1) |
+- **Arrays:** traversal, aggregation, and in-place modification.
+- **Hashing:** using a `HashMap` for efficient complement lookups.
+- **Two Pointers:** moving non-zero elements while preserving relative order.
+- **Greedy and Mathematics:** reducing operations to minimum, maximum, or median-based calculations.
+- **Dynamic Programming:** Kadane's algorithm, staircase cost optimization, and selecting non-overlapping subarrays.
+- **Sliding Window:** maintaining the median cost of each fixed-size window.
+- **Ordered Maps:** using `TreeMap` structures to maintain values on either side of a running median.
+- **Sorting and Median:** minimizing the total absolute difference by choosing a median.
 
-\*The sorting implementation may use additional space internally depending on the Java sorting implementation.
+## Running a Solution
 
-## Concepts Practiced
-
-- **Arrays:** traversal, in-place updates, and aggregate calculations.
-- **Hashing:** using a `HashMap` to improve lookup efficiency.
-- **Two Pointers:** processing arrays without allocating another array.
-- **Greedy / Mathematical Reasoning:** deriving optimal operations using minimums, maximums, and medians.
-- **Dynamic Programming:** building optimal answers from previously computed states.
-- **Algorithmic Patterns:** Kadane's algorithm and Boyer–Moore voting.
-
-## Language and Tools
-
-- **Language:** Java
-- **Platform:** [LeetCode](https://leetcode.com/)
-- **Editor:** Any Java-compatible IDE or code editor (for example, IntelliJ IDEA or VS Code)
-- **Version Control:** Git and GitHub
-
-## Running the Solutions
-
-These files are written in LeetCode's submission format. The `Solution` class is intended to be submitted to the corresponding LeetCode problem, where the platform provides the required test harness.
+The Java files use LeetCode's `Solution` class format. They are designed to be submitted to the corresponding problem on LeetCode, where the platform supplies the test harness.
 
 To run a solution locally:
-1. Open the relevant `.java` file.
-2. Add any required imports (such as `java.util.HashMap` or `java.util.Arrays`).
-3. Add a `main` method and test cases if you want to execute it outside LeetCode.
-4. Compile and run it with a Java Development Kit (JDK).
+
+1. Install a Java Development Kit (JDK).
+2. Open the problem's `.java` file.
+3. Add any imports required by the solution.
+4. Create a separate driver or `main` method with test cases.
+5. Compile and run the driver.
 
 Example:
 
@@ -72,8 +93,12 @@ java Main
 
 ## Progress
 
-This repository is a work in progress. I will continue adding solutions as I solve more problems, and improve earlier implementations when I discover clearer or more efficient approaches.
+I will keep adding solutions as I practice. The aim is not only to solve more problems, but also to understand the underlying pattern, analyze complexity, and improve the quality of each implementation.
 
 ## Connect
 
-- GitHub: [Sneha](https://github.com/Sneha-2156)
+- **GitHub:** [Sneha](https://github.com/Sneha-2156)
+
+---
+
+*Built through consistent problem-solving practice, one problem at a time.*
