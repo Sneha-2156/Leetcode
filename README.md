@@ -1,6 +1,6 @@
 <div align="center">
 
-# LeetCode Solutions in Java
+# LeetCode Solutions
 
 **15 problems solved · clean Java · time and space stated for every one**
 
