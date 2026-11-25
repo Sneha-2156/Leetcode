@@ -1,11 +1,9 @@
 class Solution {
     public int minFlips(String s) {
         String tempinput = s;
-
         int n = s.length();
         int zeros = 0;
         int ones = 0;
-
         for (char c : s.toCharArray()) {
             if (c == '0') {
                 zeros++;
@@ -28,7 +26,6 @@ class Solution {
             }
             ans = Math.min(ans, cost);
         }
-
         return ans;
 
     }
